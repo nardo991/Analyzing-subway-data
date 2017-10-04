@@ -12663,7 +12663,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -12892,12 +12892,12 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">num_rainy_days</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="c1"># Aproveitando que True = 1 e False = 0 somo essa serie de boolean retornando a quantidade de True existente.</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;rain&#39;</span><span class="p">]</span><span class="o">==</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">weather_data</span><span class="p">[[</span><span class="s1">&#39;DATEn&#39;</span><span class="p">,</span> <span class="s1">&#39;rain&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;DATEn&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12907,7 +12907,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_rainy_days</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
@@ -12922,12 +12922,13 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>44104</pre>
+<pre>rain    10
+dtype: int64</pre>
 </div>
 
 </div>
@@ -12949,13 +12950,13 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
     
     <span class="c1">#</span>
-    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;fog&#39;</span><span class="p">]</span><span class="o">==</span><span class="mf">1.0</span><span class="p">][</span><span class="s1">&#39;maxtempi&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;fog&#39;</span><span class="p">]</span><span class="o">==</span><span class="mf">1.0</span><span class="p">][</span><span class="s1">&#39;maxtempi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12965,10 +12966,10 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12980,17 +12981,12 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>61640    69.0
-61641    69.0
-61642    69.0
-61643    69.0
-61644    69.0
-Name: maxtempi, dtype: float64</pre>
+<pre>81.0</pre>
 </div>
 
 </div>
@@ -13011,7 +13007,7 @@ Name: maxtempi, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
@@ -13043,10 +13039,10 @@ Name: maxtempi, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">avg_weekend_temperature</span><span class="p">(</span><span class="n">weather_data</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">avg_weekend_temperature</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13058,12 +13054,12 @@ Name: maxtempi, dtype: float64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>60.0</pre>
+<pre>65.10066685403307</pre>
 </div>
 
 </div>
@@ -13084,13 +13080,13 @@ Name: maxtempi, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">avg_min_temperature</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="n">isRaining</span> <span class="o">=</span> <span class="n">filename</span><span class="p">[</span><span class="s1">&#39;rain&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mf">1.0</span><span class="p">])</span>
     <span class="n">minTemp</span> <span class="o">=</span> <span class="mf">55.0</span>
-    <span class="n">min_m55</span> <span class="o">=</span> <span class="n">filename</span><span class="p">[</span><span class="n">filename</span><span class="p">[</span><span class="s1">&#39;mintempi&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">minTemp</span><span class="p">][</span><span class="s1">&#39;mintempi&#39;</span><span class="p">]</span>
+    <span class="n">min_m55</span> <span class="o">=</span> <span class="n">filename</span><span class="p">[((</span><span class="n">filename</span><span class="p">[</span><span class="s1">&#39;mintempi&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">minTemp</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">isRaining</span><span class="p">)][</span><span class="s1">&#39;mintempi&#39;</span><span class="p">]</span>
     <span class="n">avg_min_temp_rainy</span> <span class="o">=</span> <span class="n">min_m55</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
     
     <span class="k">return</span> <span class="n">avg_min_temp_rainy</span>
@@ -13103,7 +13099,7 @@ Name: maxtempi, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">avg_min_temperature</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
@@ -13118,12 +13114,12 @@ Name: maxtempi, dtype: float64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[23]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>63.2699012987013</pre>
+<pre>61.238860398860396</pre>
 </div>
 
 </div>
@@ -13388,7 +13384,7 @@ Y9bNSboIWE7uPS9OPJYJz3zMzCxznvmYmVnmnHzMzCxzTj5mZpY5Jx8zM8uck4+ZmWXOycfMzDL3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong> Resposta </strong>:  Distribuição inclinada. Não,as distribuições mantêm o mesmo formato.</p>
+<p><strong> Resposta </strong>:  Distribuição inclinada positiva. Não,as distribuições mantêm o mesmo formato.</p>
 
 </div>
 </div>
@@ -13533,8 +13529,12 @@ Y9bNSboIWE7uPS9OPJYJz3zMzCxznvmYmVnmnHzMzCxzTj5mZpY5Jx8zM8uck4+ZmWXOycfMzDL3
             <span class="k">continue</span>
         
         <span class="c1"># ,UNIT,DATEn,TIMEn,Hour,DESCn,ENTRIESn_hourly,</span>
-        <span class="n">unit</span><span class="p">,</span>  <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
+        
+        <span class="n">unit</span>  <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">entries</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s1">&#39;UNIT&#39;</span> <span class="ow">or</span> <span class="n">entries</span> <span class="o">==</span> <span class="s1">&#39;ENTRIESn_hourly&#39;</span><span class="p">:</span>
+            <span class="k">continue</span>
         
         <span class="k">print</span> <span class="n">unit</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">entries</span>
 
@@ -13588,6 +13588,51 @@ Y9bNSboIWE7uPS9OPJYJz3zMzCxznvmYmVnmnHzMzCxzTj5mZpY5Jx8zM8uck4+ZmWXOycfMzDL3
         <span class="k">print</span> <span class="n">old_unit</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">total_entries</span>
         
 <span class="n">reducer</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;turnstile_data_master_with_weather.csv&#39;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mapper_result.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">mapper</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mapper_result.txt&#39;</span><span class="p">)</span>  
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;reducer_result.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">reducer</span><span class="p">()</span>
+
+<span class="c1">## Obrigado, não sabia como testar.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
 </pre></div>
 
 </div>
