@@ -11890,7 +11890,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">urllib</span>
@@ -11943,7 +11943,7 @@ linha 5...</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
@@ -11973,11 +11973,116 @@ linha 5...</p>
 
 <span class="n">output_file</span> <span class="o">=</span> <span class="s1">&#39;master_file_turnstile_1706xx.csv&#39;</span>
 <span class="n">create_master_turnstile_file</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span>
-<span class="c1">#data = pd.read_csv(output_file, sep=&#39;,&#39;)</span>
-<span class="c1">#data.head()</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>C/A</th>
+      <th>UNIT</th>
+      <th>SCP</th>
+      <th>DATEn</th>
+      <th>TIMEn</th>
+      <th>DESCn</th>
+      <th>ENTRIESn</th>
+      <th>EXITSn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>00:00:00</td>
+      <td>REGULAR</td>
+      <td>6224816</td>
+      <td>2107317</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>04:00:00</td>
+      <td>REGULAR</td>
+      <td>6224850</td>
+      <td>2107322</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>08:00:00</td>
+      <td>REGULAR</td>
+      <td>6224885</td>
+      <td>2107352</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>12:00:00</td>
+      <td>REGULAR</td>
+      <td>6225005</td>
+      <td>2107452</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>16:00:00</td>
+      <td>REGULAR</td>
+      <td>6225248</td>
+      <td>2107513</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12007,7 +12112,7 @@ linha 5...</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
@@ -12028,13 +12133,116 @@ linha 5...</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#filter_by_regular(data).head()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">filter_by_regular</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>C/A</th>
+      <th>UNIT</th>
+      <th>SCP</th>
+      <th>DATEn</th>
+      <th>TIMEn</th>
+      <th>DESCn</th>
+      <th>ENTRIESn</th>
+      <th>EXITSn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>00:00:00</td>
+      <td>REGULAR</td>
+      <td>6224816</td>
+      <td>2107317</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>04:00:00</td>
+      <td>REGULAR</td>
+      <td>6224850</td>
+      <td>2107322</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>08:00:00</td>
+      <td>REGULAR</td>
+      <td>6224885</td>
+      <td>2107352</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>12:00:00</td>
+      <td>REGULAR</td>
+      <td>6225005</td>
+      <td>2107452</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>16:00:00</td>
+      <td>REGULAR</td>
+      <td>6225248</td>
+      <td>2107513</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12069,7 +12277,7 @@ linha 5...</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
@@ -12088,13 +12296,122 @@ linha 5...</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#get_hourly_entries(data).head()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">get_hourly_entries</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>C/A</th>
+      <th>UNIT</th>
+      <th>SCP</th>
+      <th>DATEn</th>
+      <th>TIMEn</th>
+      <th>DESCn</th>
+      <th>ENTRIESn</th>
+      <th>EXITSn</th>
+      <th>ENTRIESn_hourly</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>00:00:00</td>
+      <td>REGULAR</td>
+      <td>6224816</td>
+      <td>2107317</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>04:00:00</td>
+      <td>REGULAR</td>
+      <td>6224850</td>
+      <td>2107322</td>
+      <td>34.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>08:00:00</td>
+      <td>REGULAR</td>
+      <td>6224885</td>
+      <td>2107352</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>12:00:00</td>
+      <td>REGULAR</td>
+      <td>6225005</td>
+      <td>2107452</td>
+      <td>120.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>16:00:00</td>
+      <td>REGULAR</td>
+      <td>6225248</td>
+      <td>2107513</td>
+      <td>243.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12112,7 +12429,7 @@ Para isso crie uma coluna chamada de EXITSn_hourly e insira a diferença entre a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
@@ -12130,13 +12447,128 @@ Para isso crie uma coluna chamada de EXITSn_hourly e insira a diferença entre a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#get_hourly_exits(data).head()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">get_hourly_exits</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>C/A</th>
+      <th>UNIT</th>
+      <th>SCP</th>
+      <th>DATEn</th>
+      <th>TIMEn</th>
+      <th>DESCn</th>
+      <th>ENTRIESn</th>
+      <th>EXITSn</th>
+      <th>ENTRIESn_hourly</th>
+      <th>EXITSn_hourly</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>00:00:00</td>
+      <td>REGULAR</td>
+      <td>6224816</td>
+      <td>2107317</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>04:00:00</td>
+      <td>REGULAR</td>
+      <td>6224850</td>
+      <td>2107322</td>
+      <td>34.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>08:00:00</td>
+      <td>REGULAR</td>
+      <td>6224885</td>
+      <td>2107352</td>
+      <td>35.0</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>12:00:00</td>
+      <td>REGULAR</td>
+      <td>6225005</td>
+      <td>2107452</td>
+      <td>120.0</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A002</td>
+      <td>R051</td>
+      <td>02-00-00</td>
+      <td>06/17/2017</td>
+      <td>16:00:00</td>
+      <td>REGULAR</td>
+      <td>6225248</td>
+      <td>2107513</td>
+      <td>243.0</td>
+      <td>61.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12163,7 +12595,7 @@ Por favor, devolva a hora como um número inteiro.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">time_to_hour</span><span class="p">(</span><span class="n">time</span><span class="p">):</span>
@@ -12179,13 +12611,36 @@ Por favor, devolva a hora como um número inteiro.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#weather_data[&#39;TIMEn&#39;].apply(time_to_hour).head()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIMEn&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">time_to_hour</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0     0
+1     4
+2     8
+3    12
+4    16
+Name: TIMEn, dtype: int64</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12208,7 +12663,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -12226,13 +12681,195 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#weather_data.head()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">weather_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>UNIT</th>
+      <th>DATEn</th>
+      <th>TIMEn</th>
+      <th>Hour</th>
+      <th>DESCn</th>
+      <th>ENTRIESn_hourly</th>
+      <th>EXITSn_hourly</th>
+      <th>maxpressurei</th>
+      <th>maxdewpti</th>
+      <th>...</th>
+      <th>meandewpti</th>
+      <th>meanpressurei</th>
+      <th>fog</th>
+      <th>rain</th>
+      <th>meanwindspdi</th>
+      <th>mintempi</th>
+      <th>meantempi</th>
+      <th>maxtempi</th>
+      <th>precipi</th>
+      <th>thunder</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>R001</td>
+      <td>2011-05-01</td>
+      <td>01:00:00</td>
+      <td>1</td>
+      <td>REGULAR</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>30.31</td>
+      <td>42.0</td>
+      <td>...</td>
+      <td>39.0</td>
+      <td>30.27</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>50.0</td>
+      <td>60.0</td>
+      <td>69.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>R001</td>
+      <td>2011-05-01</td>
+      <td>05:00:00</td>
+      <td>5</td>
+      <td>REGULAR</td>
+      <td>217.0</td>
+      <td>553.0</td>
+      <td>30.31</td>
+      <td>42.0</td>
+      <td>...</td>
+      <td>39.0</td>
+      <td>30.27</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>50.0</td>
+      <td>60.0</td>
+      <td>69.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>R001</td>
+      <td>2011-05-01</td>
+      <td>09:00:00</td>
+      <td>9</td>
+      <td>REGULAR</td>
+      <td>890.0</td>
+      <td>1262.0</td>
+      <td>30.31</td>
+      <td>42.0</td>
+      <td>...</td>
+      <td>39.0</td>
+      <td>30.27</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>50.0</td>
+      <td>60.0</td>
+      <td>69.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>R001</td>
+      <td>2011-05-01</td>
+      <td>13:00:00</td>
+      <td>13</td>
+      <td>REGULAR</td>
+      <td>2451.0</td>
+      <td>3708.0</td>
+      <td>30.31</td>
+      <td>42.0</td>
+      <td>...</td>
+      <td>39.0</td>
+      <td>30.27</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>50.0</td>
+      <td>60.0</td>
+      <td>69.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>R001</td>
+      <td>2011-05-01</td>
+      <td>17:00:00</td>
+      <td>17</td>
+      <td>REGULAR</td>
+      <td>4400.0</td>
+      <td>2501.0</td>
+      <td>30.31</td>
+      <td>42.0</td>
+      <td>...</td>
+      <td>39.0</td>
+      <td>30.27</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>50.0</td>
+      <td>60.0</td>
+      <td>69.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12255,11 +12892,11 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">num_rainy_days</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="c1"># Aproveitando que True = 1 e False = 0 somo essa serie de boolean retornando a quantidade de True existiam.</span>
+    <span class="c1"># Aproveitando que True = 1 e False = 0 somo essa serie de boolean retornando a quantidade de True existente.</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;rain&#39;</span><span class="p">]</span><span class="o">==</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
@@ -12270,13 +12907,31 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#num_rainy_days(weather_data)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">num_rainy_days</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>44104</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12294,7 +12949,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -12310,13 +12965,36 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#max_temp_aggregate_by_fog(weather_data).head()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>61640    69.0
+61641    69.0
+61642    69.0
+61643    69.0
+61644    69.0
+Name: maxtempi, dtype: float64</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12333,7 +13011,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
@@ -12365,13 +13043,31 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#avg_weekend_temperature(weather_data.head())</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">avg_weekend_temperature</span><span class="p">(</span><span class="n">weather_data</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>60.0</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12388,7 +13084,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">avg_min_temperature</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -12407,13 +13103,31 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#avg_min_temperature(weather_data)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">avg_min_temperature</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>63.2699012987013</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12436,7 +13150,7 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -12470,13 +13184,191 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">entries_histogram</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+/wGhmyUkqyUPHQAAAABJRU5ErkJggg==
+"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;module &#39;matplotlib.pyplot&#39; from &#39;/home/nardo/anaconda2/lib/python2.7/site-packages/matplotlib/pyplot.pyc&#39;&gt;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12518,7 +13410,7 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -12554,13 +13446,31 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">mann_whitney_plus_means</span><span class="p">(</span><span class="n">weather_data</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1105.4463767458733, 1090.278780151855, 0.64044049623978527)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12607,7 +13517,7 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -12649,7 +13559,7 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">reducer</span><span class="p">():</span>
